@@ -36,7 +36,7 @@ ThemeData getApplicationTheme(){
 
     // Button theme
     buttonTheme: ButtonThemeData(
-      shape:  StadiumBorder(),
+      shape:  const StadiumBorder(),
       disabledColor: ColorManager.grey1,
       buttonColor: ColorManager.primaryColor,
       splashColor: ColorManager.primaryOpacity70),
@@ -58,8 +58,32 @@ ThemeData getApplicationTheme(){
       subtitle1: getMediumStyle(color: ColorManager.lightGreyColor,fontSize: FontSize.s14 ),
       caption: getRegularStyle(color: ColorManager.grey1),
       bodyText1: getRegularStyle(color: ColorManager.greyColor)
+  ),
+
+   //input decoration theme (time form field)
+    inputDecorationTheme: InputDecorationTheme(
+      contentPadding: const EdgeInsets.all(AppPadding.p8),
+      hintStyle: getRegularStyle(color: ColorManager.grey1),
+      labelStyle: getMediumStyle(color: ColorManager.darkGreyColor),
+      errorStyle: getRegularStyle(color: ColorManager.errorColor),
+      //enabledBorder
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: ColorManager.greyColor,width: AppSize.s1_5),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))),
+        //focused border
+      focusedBorder: OutlineInputBorder(
+       borderSide: BorderSide(color: ColorManager.primaryColor,width: AppSize.s1_5),
+      borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))),
+      //errorBorder
+      errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: ColorManager.errorColor,width: AppSize.s1_5),
+          borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))),
+      //focusedErrorBorder
+      focusedErrorBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: ColorManager.primaryColor,width: AppSize.s1_5),
+          borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8))),
+
+
   )
-
-
   );
 }
