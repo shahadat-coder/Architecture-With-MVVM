@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class StoreDetails extends StatefulWidget {
-  const StoreDetails({super.key});
+class StoreDetailsView extends StatefulWidget {
+  const StoreDetailsView({super.key});
 
   @override
-  State<StoreDetails> createState() => _StoreDetailsState();
+  State<StoreDetailsView> createState() => _StoreDetailsViewState();
 }
 
-class _StoreDetailsState extends State<StoreDetails> {
+class _StoreDetailsViewState extends State<StoreDetailsView> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
