@@ -86,6 +86,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             ),
             onTap: () {
               // go to previous slide
+              _pageController.animateToPage(_getPreviousIndex(), duration: Duration(milliseconds: DurationConstant.d300),
+                  curve: Curves.bounceInOut);
             },
           ),
         ),
@@ -108,11 +110,28 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             ),
             onTap: () {
               // go to next slide
+              _pageController.animateToPage(_getNextIndex(), duration: Duration(milliseconds: DurationConstant.d300),
+                  curve: Curves.bounceInOut);
             },
           ),
         )
       ],
     );
+  }
+
+  int _getPreviousIndex(){
+    int previousIndex = _currentIndex --;
+    if(previousIndex == -1){
+      _currentIndex = _list.length -1;
+    }
+    return _currentIndex;
+  }
+  int _getNextIndex(){
+    int nextIndex = _currentIndex ++;
+    if(nextIndex  >= _list.length){
+      _currentIndex = 0;
+    }
+    return _currentIndex;
   }
 
   Widget _getProperCircle(int index) {
