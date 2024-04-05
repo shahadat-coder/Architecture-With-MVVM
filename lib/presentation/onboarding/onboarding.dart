@@ -29,6 +29,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorManager.whiteColor,
+      
       appBar: AppBar(
         backgroundColor: ColorManager.whiteColor,
         elevation: AppSize.s1_5,
