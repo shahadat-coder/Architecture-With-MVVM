@@ -1,4 +1,8 @@
+
 abstract class BaseViewModel extends BaseViewModelInputs{
+
+abstract class BaseViewModel{
+
   // shared variables and functions that will be used through any view model.
 }
 
